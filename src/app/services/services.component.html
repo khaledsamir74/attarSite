@@ -1,0 +1,20 @@
+<div class="edit">
+    <h1>add Service</h1>
+    <div class="inputContainer">
+        <label class="labl">Email</label>
+        <input class="Input" type="email" [(ngModel)]="pEmail" placeholder="aaa@bbb.ccc">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Number</label>
+        <input class="Input" [(ngModel)]="pNumber" placeholder="01********">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Address</label>
+        <input class="Input" [(ngModel)]="pAddress">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Service details</label>
+        <textarea class="Input" [(ngModel)]="pDetails"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success subBtn" (click)="addService()">Send</button>
+</div>

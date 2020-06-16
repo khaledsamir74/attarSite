@@ -1,0 +1,40 @@
+<body>
+    <div class="sort" [ngStyle]="text" *ngIf="!loading">
+        <div class="sortBy">
+            <h4><b>Sort by</b></h4>
+        </div>
+        <div class="price">
+            <h4><b>Price</b></h4>
+            <button (click)="allClick()" type="button" class="btn btn-warning">All</button>
+            <button (click)="lthClick()" type="submit" class="btn btn-warning">Low to high</button>
+            <button (click)="htlClick()" type="button" class="btn btn-warning">High to low</button>
+        </div>
+        <div class="price">
+            <h4><b>discount</b></h4>
+            <button (click)="allClick()" type="button" class="btn btn-warning">All</button>
+            <button (click)="saleHtlClick()" type="button" class="btn btn-warning">High to low</button>
+        </div>
+    </div>
+    <div class="productsCard">
+        <!-- **************************************************************************************** -->
+        <div class="card" [ngStyle]="style" style="width: 210" *ngFor="let product of products">
+            <a [href]="product.link" class="cardDiv">
+                <div *ngIf="loading" class="spinner-border text-dark" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div *ngIf="!loading">
+                    <img *ngIf="product.discount!=0" [src]="product.discountImage" class="saleImage">
+                    <img [src]="product.image" class="card-img-top" alt="{{product.name}}">
+                </div>
+                <div class="card-body">
+                    <!--<h5 class="card-title" [ngStyle]="text">{{product.id}}</h5>-->
+                    <h5 class="card-title" [ngStyle]="text">{{product.name}}</h5>
+                    <p class="card-text">{{product.desc}}</p>
+                    <a [ngStyle]="btn" class="btn btn-primary afterDiscount">{{product.salePrice}} L.E.</a>
+                    <a [ngStyle]="discBtn" *ngIf="product.discount!=0" class="btn btn-primary discount">{{product.price}}</a>
+                </div>
+            </a>
+        </div>
+        <!-- **************************************************************************************** -->
+    </div>
+</body>

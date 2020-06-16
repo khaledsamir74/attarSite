@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Add</h1>
+    <div class="inputContainer">
+        <label class="labl">Name</label>
+        <input class="Input" id="name" placeholder="Product Name" #newProductName (keyup)="setValue('name', newProductName.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Description</label>
+        <textarea class="Input" id="description" rows="3" placeholder="Product Description" #newProductDesc (keyup)="setValue('desc', newProductDesc.value)"></textarea>
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Image</label>
+        <input type="file" id="image" class="imageInput" #newProductImage (change)="setValue('image', $event)" accept=".png,.jpg">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Price</label>
+        <input class="Input" id="price" placeholder="Initial Price" #newProductPrice (keyup)="setValue('price', newProductPrice.value)" type="number">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">discount (If exist)</label>
+        <input class="Input" id="discount" placeholder="Discount" #newProductDiscount (keyup)="setValue('discount', newProductDiscount.value)" type="number" value="0">
+        <label>%</label>
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Category</label>
+        <select class="Input" #newProductCategory (change)="setValue('category', newProductCategory.value)">
+            <option>Select Category</option>
+            <option [value]="category.id" *ngFor="let category of categories">{{category.name}}</option>
+        </select>
+    </div>
+    <button (click)="addProduct()" class="btn btn-success subBtn">Add</button>
+</div>

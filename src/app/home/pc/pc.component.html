@@ -1,0 +1,18 @@
+<div class="mainDiv" [ngStyle]="backGmain">
+    <div class="divHeadContainer">
+        <h1 class="divHead" [ngStyle]="accent">Top PC discount <a href="products/1"><button type="button" [ngStyle]="morebtn" class="btn btn-light moreBtn">Show more</button></a></h1>
+    </div>
+    <div class="items">
+        <a *ngFor="let product of products" [href]="product.link" class="link">
+            <div class="itemDiv" [ngStyle]="accentBorder">
+                <img *ngIf="product.discount!=0" [src]="product.discountImage" class="saleImage">
+                <img [src]="product.image" class="disImage">
+                <!--<p>{{product.id}}</p>-->
+                <p>{{product.name}}</p>
+                <p type="number">{{product.salePrice}} L.E.
+                    <b class="salePrice" *ngIf="product.discount!=0">{{product.price}}</b>
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

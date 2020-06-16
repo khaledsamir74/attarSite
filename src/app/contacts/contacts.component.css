@@ -1,0 +1,89 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding-top: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: #e6e6ff;
+    height: auto;
+}
+
+.owner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.ownerTxt {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: fixed;
+    left: 300px;
+    top: 120px;
+}
+
+.ownerCard {
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    left: 150px;
+    top: 170px;
+    background-color: #f8f8ff;
+}
+
+.mwazze3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.card {
+    margin-left: 5%;
+    background-color: #f8f8ff;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 00px;
+        display: block;
+    }
+    .ownerCard {
+        height: 150px;
+        padding: 10px;
+        position: fixed;
+        left: 150px;
+        top: 170px;
+    }
+    .owner {
+        display: block;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .mwazze3 {
+        display: block;
+        width: 372px;
+    }
+    .ownerTxt {
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        position: unset;
+        margin-left: 3%;
+    }
+    .ownerCard {
+        width: 300px;
+        padding: 10px;
+        position: unset;
+        margin-left: 50px;
+    }
+    img {
+        display: none;
+    }
+    .card-body {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,26 @@
+#carouselExampleIndicators {
+    width: 100%;
+    height: 300px;
+}
+
+.d-block {
+    height: 300px;
+}
+
+.bannerImage {
+    width: 900px;
+}
+
+@media (max-width: 600px) {
+    #carouselExampleIndicators {
+        width: 100%;
+        height: 200px;
+    }
+    .d-block {
+        height: 200px;
+    }
+    .bannerImage {
+        width: 310px;
+        height: 200px;
+    }
+}

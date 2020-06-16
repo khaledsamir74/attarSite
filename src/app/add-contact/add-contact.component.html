@@ -1,0 +1,20 @@
+<div class="edit">
+    <h1>add contacts</h1>
+    <div class="inputContainer">
+        <label class="labl">place name</label>
+        <input class="Input" [(ngModel)]="pName" placeholder="ElAttar">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">place number</label>
+        <input class="Input" [(ngModel)]="pNumber" placeholder="01********">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">place address</label>
+        <input class="Input" [(ngModel)]="pAdress">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Facebook link</label>
+        <input class="Input" [(ngModel)]="pFB">
+    </div>
+    <button type="submit" class="btn btn-success subBtn" (click)="addContact()">Add</button>
+</div>

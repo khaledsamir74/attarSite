@@ -1,0 +1,30 @@
+<div class="delete">
+    <h1>Contarcts</h1>
+    <div class="inputContainer">
+        <label class="labl">service</label>
+        <select (change)="onChangeservice($event)" #current>
+            <option *ngFor="let service of services">{{service.id}}</option>
+        </select>
+    </div>
+
+    <div class="inputContainer">
+        <label class="labl">Email</label>
+        <input class="Input" placeholder="service email" #newProductemail ngModel="{{edited.Email}}" (change)="editValue('Email', newProductemail.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">address</label>
+        <input class="Input" placeholder="service address" #newProductAddress ngModel="{{edited.address}}" (change)="editValue('address', newProductAddress.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">number</label>
+        <input class="Input" placeholder="service number" #newProductNumber ngModel="{{edited.number}}" (change)="editValue('number', newProductNumber.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">details</label>
+        <textarea class="Input" placeholder="service details" #newProductdetails ngModel="{{edited.details}}" (change)="editValue('details', newProductdetails.value)"></textarea>
+    </div>
+    <div class="btnsContainer">
+        <button type="submit" class="btn btn-success subBtn" (click)="onEditClick()">Edit</button>
+        <button type="submit" class="btn btn-success subBtn" (click)="onDeleteClick()">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+.bg {
+    background-color: primaryColor;
+}
+
+.NavLogo {
+    margin-right: 30px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.text {
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#catBtn {
+    display: none;
+}
+
+.text2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.dropdown {
+    float: right;
+    text-align: right;
+}
+
+.service {
+    font-weight: 500px;
+    font-size: 20px;
+}
+
+.service:hover {
+    cursor: pointer;
+}
+
+.nServices {
+    position: fixed;
+    right: 30px;
+}
+
+@media (max-width: 1000px) {}

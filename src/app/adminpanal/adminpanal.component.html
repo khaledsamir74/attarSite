@@ -1,0 +1,35 @@
+<div class="loadingContainer" *ngIf="loading">
+    <div class="spinner-border text-light" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div class="container">
+    <div class="btns">
+        <button (click)="setOperation(0)" type="button" class="btn menuBtn">Add item</button>
+        <button (click)="setOperation(2)" type="button" class="btn menuBtn">edit item</button>
+        <button (click)="setOperation(3)" type="button" class="btn menuBtn">Add contact</button>
+        <button (click)="setOperation(4)" type="button" class="btn menuBtn">delete contact</button>
+        <button (click)="setOperation(5)" type="button" class="btn menuBtn">Add banner</button>
+        <button (click)="setOperation(6)" type="button" class="btn menuBtn">Delete banner</button>
+        <button (click)="setOperation(7)" type="button" class="btn menuBtn">view contracts</button>
+        <button (click)="setOperation(8)" type="button" class="btn menuBtn">add admin</button>
+    </div>
+    <div class="content">
+        <app-additem [categories]="categories" (messageEvent)="receiveMessage($event, 'op0')" *ngIf="operation === 0" class="sectionContainer"></app-additem>
+        <!--**********************************************************************************************-->
+        <app-delete-product [categories]="categories" (messageEvent)="receiveMessage($event, 'op1')" *ngIf="operation === 2" class="sectionContainer"></app-delete-product>
+        <!--**********************************************************************************************-->
+        <app-add-contact (messageEvent)="receiveMessage($event, 'op3')" *ngIf="operation === 3" class="sectionContainer"></app-add-contact>
+        <!--**********************************************************************************************-->
+        <app-edit-contact (messageEvent)="receiveMessage($event, 'op4')" *ngIf="operation === 4" class="sectionContainer"></app-edit-contact>
+        <!--**********************************************************************************************-->
+        <app-addanner (messageEvent)="receiveMessage($event, 'op5')" *ngIf="operation === 5" class="sectionContainer"></app-addanner>
+        <!--**********************************************************************************************-->
+        <app-deletebanner (messageEvent)="receiveMessage($event, 'op6')" *ngIf="operation === 6" class="sectionContainer"></app-deletebanner>
+        <!--**********************************************************************************************-->
+        <app-viewservices (messageEvent)="receiveMessage($event, 'op7')" *ngIf="operation === 7" class="sectionContainer"></app-viewservices>
+        <!--**********************************************************************************************-->
+        <app-addadmin (messageEvent)="receiveMessage($event, 'op8')" *ngIf="operation === 8" class="sectionContainer"></app-addadmin>
+        <button type="submit" class="btn btn-primary" (click)="logOut()">Log out</button>
+    </div>
+</div>

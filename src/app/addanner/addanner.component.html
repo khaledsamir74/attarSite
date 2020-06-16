@@ -1,0 +1,6 @@
+<div class="home">
+    <h1>add banner</h1>
+    <h4>banner image</h4>
+    <input class="inp" type="file" #newBannerImage (change)="setValue('image', $event)" accept=".png,.jpg">
+    <button type="submit" class="btn btn-success add" (click)="addBanner()">Add</button>
+</div>

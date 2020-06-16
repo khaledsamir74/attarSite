@@ -1,0 +1,26 @@
+<div class="delete">
+    <h1>Contacts</h1>
+    <div class="inputContainer">
+        <label class="labl">contact</label>
+        <select (change)="onChangecontact($event)" #current>
+            <option *ngFor="let contact of contacts">{{contact.id}} ({{contact.name}})</option>
+        </select>
+    </div>
+
+    <div class="inputContainer">
+        <label class="labl">Name</label>
+        <input class="Input" id="name" placeholder="contact Name" #newProductName ngModel="{{edited.name}}" (change)="editValue('name', newProductName.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">address</label>
+        <input class="Input" id="name" placeholder="contact address" #newProductAddress ngModel="{{edited.address}}" (change)="editValue('address', newProductAddress.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">number</label>
+        <input class="Input" id="name" placeholder="contact number" #newProductNumber ngModel="{{edited.number}}" (change)="editValue('number', newProductNumber.value)">
+    </div>
+    <div class="btnsContainer">
+        <button type="submit" class="btn btn-success subBtn" (click)="onEditClick()">Edit</button>
+        <button type="submit" class="btn btn-success subBtn" (click)="onDeleteClick()">Delete</button>
+    </div>
+</div>

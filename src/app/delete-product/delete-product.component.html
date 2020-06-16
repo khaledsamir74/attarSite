@@ -1,0 +1,42 @@
+<div class="delete">
+    <div class="inputContainer">
+        <label class="labl">Product</label>
+        <select (change)="onChangeProduct($event)" #current>
+            <option *ngFor="let product of products">{{product.id}} ({{product.name}})</option>
+        </select>
+    </div>
+
+    <div class="inputContainer">
+        <label class="labl">Name</label>
+        <input class="Input" id="name" placeholder="Product Name" #newProductName ngModel="{{edited.name}}" (change)="editValue('name', newProductName.value)">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Description</label>
+        <textarea class="Input" id="description" rows="3" placeholder="Product Description" #newProductDesc ngModel="{{edited.desc}}" (change)="editValue('desc', newProductDesc.value)"></textarea>
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Image</label>
+        <input type="file" id="image" class="imageInput" #newProductImage (change)="editValue('image', $event)" accept=".png,.jpg">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Price</label>
+        <input class="Input" id="price" placeholder="Initial Price" #newProductPrice ngModel="{{edited.price}}" (change)="editValue('price', newProductPrice.value)" type="number">
+    </div>
+    <div class="inputContainer">
+        <label class="labl">discount (If exist)</label>
+        <input class="Input" id="discount" placeholder="Discount" #newProductDiscount ngModel="{{edited.discount}}" (change)="editValue('discount', newProductDiscount.value)" type="number" value="0">
+        <label>%</label>
+    </div>
+    <div class="inputContainer">
+        <label class="labl">Category</label>
+        <select class="Input" #newProductCategory (change)="editValue('category', newProductCategory.value)">
+            <option [value]="category.id" *ngFor="let category of categories"
+                [selected]="category.id == edited.category">{{category.name}}</option>
+        </select>
+    </div>
+
+    <div class="btnsContainer">
+        <button type="submit" class="btn btn-success subBtn" (click)="onEditClick()">Edit</button>
+        <button type="submit" class="btn btn-success subBtn" (click)="onDeleteClick()">Delete</button>
+    </div>
+</div>

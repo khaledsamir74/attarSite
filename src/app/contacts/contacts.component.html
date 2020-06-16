@@ -1,0 +1,36 @@
+<body>
+    <div class="owner">
+        <h1 class="ownerTxt ">Owner</h1>
+        <div class="card ownerCard" style="width: 18rem;">
+            <img src="../../assets/img/logo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">El-Attar</h5>
+                <h5 class="card-title">02222222/0222222222</h5>
+                <a href="https://www.facebook.com/oasis.techgroup">
+                    <h5 class="card-title">Facebook : FB link</h5>
+                </a>
+                <h5 class="card-title">whatsapp : whatsapp number</h5>
+            </div>
+        </div>
+    </div>
+    <div class="mwazze3">
+        <div class="card mb-3" style="max-width: 540px;" *ngFor="let contact of contacts">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../assets/img/logo.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{contact.Email}}</h5>
+                        <h5 class="card-title">{{contact.number}}</h5>
+                        <h5 class="card-title">{{contact.address}}</h5>
+                        <a href="{{contact.FBlink}}">
+                            <h5 class="card-title">{{contact.FBlink}}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--****************************************************************************************-->
+    </div>
+</body>

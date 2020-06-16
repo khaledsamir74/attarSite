@@ -1,0 +1,11 @@
+<div class="delete">
+    <div class="inputContainer">
+        <h1>Banner</h1>
+        <select>
+        <option class="op" *ngFor="let Banner of Banners">{{Banner.id}})</option>
+    </select>
+    </div>
+    <div class="btnsContainer">
+        <button type="submit" class="btn btn-success subBtn" (click)="onDeleteClick()">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg" [ngStyle]="style">
+    <img src="../../assets/img/logo.jpg" width="40" height="40" class="NavLogo">
+    <a class="navbar-brand text" href="" [ngStyle]="accent">Oasis-Tech</a>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link text2" href="" [ngStyle]="style">Home</a>
+            </li>
+            <li class="nav-item dropdown" id="catBtn">
+                <a class="nav-link dropdown-toggle text2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [ngStyle]="style">
+            Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngStyle]="style">
+                    <a class="dropdown-item text2" href="products/0" [ngStyle]="style">Laptop</a>
+                    <a class="dropdown-item text2" href="products/1" [ngStyle]="style">PC</a>
+                    <a class="dropdown-item text2" href="products/2" [ngStyle]="style">Accessories</a>
+                    <a class="dropdown-item text2" href="products/4" [ngStyle]="style">Servers</a>
+                    <a class="dropdown-item text2" href="products/3" [ngStyle]="style">Spares</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text2" href="contacts" [ngStyle]="style">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text2" href="https://www.facebook.com/oasis.techgroup" [ngStyle]="style">Facebook</a>
+            </li>
+            <li class="nav-item nServices">
+                <a class="nav-link service text2" href="services" [ngStyle]="accent">يوجد عقود صيانة دورية</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,100 @@
+.mainDiv {
+    height: 350px;
+    width: 900px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scroll-padding: 0px;
+}
+
+.itemDiv {
+    height: 220px;
+    display: block;
+    margin-left: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 165px;
+}
+
+.divHead {
+    text-align: center;
+    font-weight: 600px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.item {
+    overflow: hidden;
+}
+
+.saleText {
+    text-align: center;
+}
+
+.divHeadContainer {
+    margin-bottom: 20px;
+}
+
+.saleImage {
+    position: absolute;
+    height: 40px;
+    left: 10px;
+    top: 5px;
+}
+
+.salePrice {
+    text-decoration: line-through;
+}
+
+.disImage {
+    width: 120px;
+    height: 120px;
+}
+
+.link {
+    text-decoration-line: none;
+}
+
+@media (max-width: 600px) {
+    .mainDiv {
+        height: 280px;
+        width: 310px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .itemDiv {
+        height: 200px;
+        margin-left: 5px;
+        width: 120px;
+    }
+    .items {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        scroll-behavior: auto;
+        -ms-overflow-style: auto;
+        scroll-padding: 50px;
+        padding-bottom: 10px;
+    }
+    p {
+        font-size: 13px;
+    }
+    .divHead {
+        text-align: center;
+        font-weight: 300px;
+    }
+}

@@ -1,0 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+form {
+    margin: 10%;
+}
+
+.btn {
+    padding: 5px;
+    margin-top: 10px;
+}
